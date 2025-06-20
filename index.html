@@ -1,51 +1,34 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Huojuvat Palmut</title>
-  <style>
-    body, html {
-      margin: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-    .background {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    .palm {
-      animation: sway 5s ease-in-out infinite alternate;
-      transform-origin: bottom center;
-    }
-    @keyframes sway {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(5deg); }
-    }
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      font-family: sans-serif;
-      color: white;
-      text-shadow: 0 0 5px black;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover New York</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1500916434205-0c77489c6cf7');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-<body>
-  <svg class="background" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
-    <rect width="100%" height="100%" fill="#4db8ff" />
-    <g class="palm" transform="translate(400, 400)">
-      <rect x="-5" y="0" width="10" height="150" fill="#5a3e1b" />
-      <path d="M0,0 C-60,-100 -80,-140 0,-130 C80,-140 60,-100 0,0" fill="#228B22" />
-      <path d="M0,0 C-40,-90 -70,-120 0,-115 C70,-120 40,-90 0,0" fill="#2e8b57" transform="rotate(40)" />
-      <path d="M0,0 C-40,-90 -70,-120 0,-115 C70,-120 40,-90 0,0" fill="#2e8b57" transform="rotate(-40)" />
-    </g>
-  </svg>
-  <div class="content">
-    <h1>Tervetuloa Palmuparatiisiin</h1>
-  </div>
-</body>
-</html>
+<body class="font-sans text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Discover New York</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-blue-300">Home</a></li>
+                    <li><a href="#attractions" class="hover:text-blue-300">Attractions</a></li>
+                    <li><a href="#about" class="hover:text-blue-300">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero h-96 flex items-center justify-center text-white">
+        <div class="text-center bg-black bg-opacity-50 p-6 rounded">
+            <h2 class="text-4xl font-bold mb-4">Welcome to New York</h2>
